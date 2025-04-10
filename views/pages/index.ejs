@@ -18,46 +18,21 @@
     </section>
 
     <!-- Recent Posts Section -->
-    <section class="container mx-auto px-6 py-12">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <h3 class="text-2xl font-bold mb-8">Recent Posts</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Post 1 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
-                <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 1" class="w-full md:w-32 h-32 object-cover rounded">
-                <div>
-                    <h4 class="text-lg font-semibold">City Lights</h4>
-                    <p class="text-gray-600 text-sm">Exploring urban life after dark.</p>
-                    <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
-                </div>
-            </div>
-            <!-- Post 2 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
-                <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 2" class="w-full md:w-32 h-32 object-cover rounded">
-                <div>
-                    <h4 class="text-lg font-semibold">Coffee Chronicles</h4>
-                    <p class="text-gray-600 text-sm">My quest for the perfect brew.</p>
-                    <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
-                </div>
-            </div>
-            <!-- Post 3 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
-                <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 3" class="w-full md:w-32 h-32 object-cover rounded">
-                <div>
-                    <h4 class="text-lg font-semibold">Book Nook</h4>
-                    <p class="text-gray-600 text-sm">Reviews of my latest reads.</p>
-                    <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
-                </div>
-            </div>
-            <!-- Post 4 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
-                <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 4" class="w-full md:w-32 h-32 object-cover rounded">
-                <div>
-                    <h4 class="text-lg font-semibold">DIY Dreams</h4>
-                    <p class="text-gray-600 text-sm">Crafting projects for beginners.</p>
-                    <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
-                </div>
+        <% posts.forEach(post => { %>
+        <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
+            <img src="<%= post.image %>" alt="Post Image" class="w-full md:w-32 h-32 object-cover rounded">
+            <div>
+            <h4 class="text-lg font-semibold"><%= post.title %></h4>
+            <p class="text-gray-600 text-sm"><%= post.description %></p>
+            <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
             </div>
         </div>
-    </section>
+        <% }) %>
+        </div>
+  </section>
+  
     
 </main>
