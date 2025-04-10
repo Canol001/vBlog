@@ -1,9 +1,22 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('../models/Post');  // Make sure the Post model is imported
 const blogController = require('../controllers/blogController');
 
 // Home route - display all blog posts
-router.get('/', blogController.getHomePage);
+// router.get('/', blogController.getHomePage);
+// Home route - display all blog posts
+router.get('/', async (req, res) => {
+    try {
+        const posts = await Post.find().limit(4); // Get recent 4 posts
+        console.log(posts);  // Log the posts for debugging
+        res.render('pages/index', { posts }); // Explicitly reference 'pages/index.ejs'
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error fetching posts kumbafuuuu");
+    }
+});
+
 
 // Blog post route - display a single blog post
 router.get('/post/:id', blogController.getBlogPost);
@@ -24,3 +37,5 @@ router.get('/contact', (req, res) => {
 });
 
 module.exports = router;
+
+
