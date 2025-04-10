@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Haven - Home</title>
+    <!-- Tailwind CSS CDN (use a build tool in production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-serif">
+    <!-- Sidebar Navigation -->
+    <aside class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-20" id="sidebar">
+        <div class="p-6">
+            <h1 class="text-3xl font-bold text-teal-700">vBlog</h1>
+            <nav class="mt-8 space-y-4">
+                <a href="#" class="block text-lg hover:text-teal-600">Home</a>
+                <a href="blog.html" class="block text-lg hover:text-teal-600">Blog</a>
+                <a href="about.html" class="block text-lg hover:text-teal-600">About</a>
+                <a href="contact.html" class="block text-lg hover:text-teal-600">Contact</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="md:ml-64">
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden fixed top-4 left-4 z-30 p-2 bg-teal-700 text-white rounded-full" id="sidebar-toggle">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Featured Post Section -->
+        <section class="bg-teal-700 text-white py-20 px-6">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Story</h2>
+                <p class="text-xl mb-6">A Journey Through the Mountains</p>
+                <p class="text-gray-200 mb-8 max-w-2xl">Discover the beauty of nature and the lessons it taught me on this unforgettable hike.</p>
+                <a href="#" class="inline-block bg-white text-teal-700 px-6 py-3 rounded-full font-medium hover:bg-gray-100">Read Now</a>
+            </div>
+        </section>
+
+        <!-- Recent Posts Section -->
+        <section class="container mx-auto px-6 py-12">
+            <h3 class="text-2xl font-bold mb-8">Recent Posts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Post 1 -->
+                <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
+                    <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 1" class="w-full md:w-32 h-32 object-cover rounded">
+                    <div>
+                        <h4 class="text-lg font-semibold">City Lights</h4>
+                        <p class="text-gray-600 text-sm">Exploring urban life after dark.</p>
+                        <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
+                    <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 2" class="w-full md:w-32 h-32 object-cover rounded">
+                    <div>
+                        <h4 class="text-lg font-semibold">Coffee Chronicles</h4>
+                        <p class="text-gray-600 text-sm">My quest for the perfect brew.</p>
+                        <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
+                    <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 3" class="w-full md:w-32 h-32 object-cover rounded">
+                    <div>
+                        <h4 class="text-lg font-semibold">Book Nook</h4>
+                        <p class="text-gray-600 text-sm">Reviews of my latest reads.</p>
+                        <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+                <!-- Post 4 -->
+                <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 hover:shadow-md transition">
+                    <img src="https://media.istockphoto.com/id/1220272363/photo/young-happy-family-pulling-their-suitcases-in-nature.jpg?s=612x612&w=0&k=20&c=JEOghGZpVyUOh32RMrmr74YKR77UupfV9st2cUL_c7o=" alt="Post 4" class="w-full md:w-32 h-32 object-cover rounded">
+                    <div>
+                        <h4 class="text-lg font-semibold">DIY Dreams</h4>
+                        <p class="text-gray-600 text-sm">Crafting projects for beginners.</p>
+                        <a href="#" class="text-teal-600 text-sm font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-teal-800 text-white py-8 px-4 text-center md:text-left">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- About -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">About vBlog</h4>
+                    <p class="text-sm text-gray-200">
+                        vBlog is a space where curiosity meets content. Explore tech, life, and creativity in every post.
+                    </p>
+                </div>
+        
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+                    <ul class="text-sm text-gray-200 space-y-1">
+                        <li><a href="/" class="hover:underline">Home</a></li>
+                        <li><a href="/about" class="hover:underline">About Us</a></li>
+                        <li><a href="/contact" class="hover:underline">Contact</a></li>
+                        <li><a href="/privacy" class="hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact & Social -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Connect</h4>
+                    <p class="text-sm text-gray-200">Email: canolowana6@gmail.com</p>
+                    <div class="flex justify-center md:justify-start mt-2 space-x-4">
+                        <!-- Replace # with actual links -->
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="mt-8 border-t border-teal-600 pt-4 text-sm text-gray-300 text-center">
+                <p>© 2025 vBlog | <a href="#">Spacyfire</a></p>
+            </div>
+        </footer>
+        
+    </main>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+    </script>
+</body>
+</html>
