@@ -36,6 +36,20 @@ router.get('/contact', (req, res) => {
     res.render('pages/contact', { title: 'Contact Us' });
 });
 
+// Route for displaying individual post details
+router.get('/post/:id', async (req, res) => {
+    try {
+        const post = await Post.findById(req.params.id);  // Find post by ID
+        if (!post) {
+            return res.status(404).send("Post not found");
+        }
+        res.render('postDetail', { post });  // Render postDetail.ejs and pass the post data
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error fetching post details");
+    }
+});
+
 module.exports = router;
 
 

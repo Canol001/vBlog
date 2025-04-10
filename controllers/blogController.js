@@ -1,4 +1,4 @@
-const Blog = require('../models/Blog');  // Assuming you'll create this model
+const Blog = require('../models/Post');  // Assuming you'll create this model
 
 // Get the homepage, displaying all blog posts
 exports.getHomePage = async (req, res) => {
@@ -25,15 +25,18 @@ exports.getBlogPost = async (req, res) => {
         const post = await Blog.findById(id);
         
         if (!post) {
-            return res.status(404).render('404', { message: "Post Not Found" }); // Handle missing post
+            return res.status(404).render('404', { message: "Post Not Found" });
         }
 
+        console.log(post);  // Debugging line
+
         res.render('pages/post', { 
-            title: post.title, // Use post's title for the page title
-            post  // Pass the single post to the view
+            title: post.title,
+            post
         });
     } catch (err) {
         console.error("Error fetching blog post: ", err);
         res.status(500).render('error', { message: "Server Error", error: err });
     }
 };
+

@@ -31,9 +31,10 @@ const blogRoutes = require('./routes/blogRoutes');
 app.use('/', blogRoutes);
 
 // 404 Route
-app.use((req, res) => {
-    res.status(404).render('404');
+app.use((req, res, next) => {
+    res.status(404).render('404');  // Render the 404 view
 });
+
 
 // Start server
 app.listen(port, () => {
