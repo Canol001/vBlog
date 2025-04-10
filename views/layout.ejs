@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-serif min-h-screen flex flex-col">
+
+    <!-- Sidebar Navigation -->
+    <aside class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-20" id="sidebar">
+        <div class="p-6">
+            <h1 class="text-3xl font-bold text-teal-700">vBlog</h1>
+            <nav class="mt-8 space-y-4">
+                <a href="/" class="block text-lg hover:text-teal-600">Home</a>
+                <a href="/blog" class="block text-lg hover:text-teal-600">Blog</a>
+                <a href="/about" class="block text-lg hover:text-teal-600">About</a>
+                <a href="/contact" class="block text-lg hover:text-teal-600">Contact</a>
+            </nav>
+        </div>
+    </aside>
+
+        <%- body %>
+    <!-- Footer -->
+    <footer class="bg-teal-800 text-white py-8 px-4 text-center md:text-left">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- About -->
+            <div>
+                <h4 class="text-lg font-semibold mb-2">About vBlog</h4>
+                <p class="text-sm text-gray-200">
+                    vBlog is a space where curiosity meets content. Explore tech, life, and creativity in every post.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+                <ul class="text-sm text-gray-200 space-y-1">
+                    <li><a href="/" class="hover:underline">Home</a></li>
+                    <li><a href="/about" class="hover:underline">About Us</a></li>
+                    <li><a href="/contact" class="hover:underline">Contact</a></li>
+                    <li><a href="/privacy" class="hover:underline">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Social -->
+            <div>
+                <h4 class="text-lg font-semibold mb-2">Connect</h4>
+                <p class="text-sm text-gray-200">Email: canolowana6@gmail.com</p>
+                <div class="flex justify-center md:justify-start mt-2 space-x-4">
+                    <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 border-t border-teal-600 pt-4 text-sm text-gray-300 text-center">
+            <p>© 2025 vBlog | <a href="#">Spacyfire</a></p>
+        </div>
+    </footer>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        if (sidebarToggle && sidebar) {
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+        }
+    </script>
+
+</body>
+</html>
